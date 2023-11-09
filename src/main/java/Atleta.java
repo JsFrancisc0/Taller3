@@ -64,7 +64,7 @@ public class Atleta {
 	}
 
 	public void mostrarInfo() {
-		System.out.println("Nombre: "+getNombre()+"\n Edad: "+getEdad()+"\n Pais: "+getPais()+"\n Lista Disciplinas:");
+		System.out.println("Nombre: "+getNombre()+"\n Edad: "+getEdad()+"\n Pais: "+getPais()+"\n Lista de Disciplinas:");
 		for (Disciplina i : getListaDisciplinas()){
 			System.out.println(i.getNombre()+"\n");
 		}

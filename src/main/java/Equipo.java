@@ -53,8 +53,7 @@ public class Equipo {
 	 * @param atleta
 	 */
 	public void agregarAtleta(Atleta atleta) {
-		// TODO - implement Equipo.agregarAtleta
-		throw new UnsupportedOperationException();
+		listaAtletas.add(atleta);
 	}
 
 	/**
@@ -62,13 +61,18 @@ public class Equipo {
 	 * @param nombreAtleta
 	 */
 	public void eliminarAtleta(String nombreAtleta) {
-		// TODO - implement Equipo.eliminarAtleta
-		throw new UnsupportedOperationException();
+		for (Atleta i : getListaAtletas()){
+			if (i.getNombre().equalsIgnoreCase(nombreAtleta)){
+				listaAtletas.remove(i);
+			}
+		}
 	}
 
 	public void mostrarInfo() {
-		// TODO - implement Equipo.mostrarInfo
-		throw new UnsupportedOperationException();
+		System.out.println("Nombre: "+getNombre()+"\n Disciplina: "+disciplina.getNombre()+"\n Lista de Atletas:");
+		for (Atleta i : getListaAtletas()){
+			System.out.println(i.getNombre()+"\n");
+		}
 	}
 
 }

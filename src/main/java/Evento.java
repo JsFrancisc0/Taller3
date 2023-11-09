@@ -62,9 +62,41 @@ public class Evento {
 		this.participantes = participantes;
 	}
 
+	public void agregarParticipante(Atleta atleta) {
+		participantes.add(atleta);
+	}
+
+	/**
+	 *
+	 * @param nombreAtleta
+	 */
+	public void eliminarParticipante(String nombreAtleta) {
+		for (Atleta i : getParticipantes()){
+			if (i.getNombre().equalsIgnoreCase(nombreAtleta)){
+				participantes.remove(i);
+			}
+		}
+	}
+
+	public void agregarEquipo(Equipo equipo) {
+		equipos.add(equipo);
+	}
+
+	public void eliminarEquipo(String nombreEquipo) {
+		for (Equipo i : getEquipos()){
+			if (i.getNombre().equalsIgnoreCase(nombreEquipo)){
+				equipos.remove(i);
+			}
+		}
+	}
 	public void mostrarInfo() {
-		// TODO - implement Evento.mostrarInfo
-		throw new UnsupportedOperationException();
+		System.out.println("Disciplina: "+getDisciplina()+"\n Fecha: "+getFecha()+"\n Lista de Participantes:");
+		for (Atleta i : getParticipantes()){
+			System.out.println(i.getNombre()+"\n");
+		}
+		for (Equipo i : getEquipos()){
+			System.out.println(i.getNombre()+"\n");
+		}
 	}
 
 }
