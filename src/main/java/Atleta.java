@@ -64,8 +64,10 @@ public class Atleta {
 	}
 
 	public void mostrarInfo() {
-		// TODO - implement Atleta.mostrarInfo
-		throw new UnsupportedOperationException();
+		System.out.println("Nombre: "+getNombre()+"\n Edad: "+getEdad()+"\n Pais: "+getPais()+"\n Lista Disciplinas:");
+		for (Disciplina i : getListaDisciplinas()){
+			System.out.println(i.getNombre()+"\n");
+		}
 	}
 
 	/**

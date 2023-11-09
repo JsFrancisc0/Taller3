@@ -47,8 +47,7 @@ public class Disciplina {
 	}
 
 	public void mostrarInfo() {
-		// TODO - implement Disciplina.mostrarInfo
-		throw new UnsupportedOperationException();
+		System.out.println("Nombre: "+getNombre()+"\n Numero de Participantes: "+getNumParticipantes()+"\n Record mundial: "+ getRecordMundial());
 	}
 
 }
